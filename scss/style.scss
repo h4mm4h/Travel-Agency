@@ -1,0 +1,403 @@
+
+@import "normalize.scss";
+@import "layout.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+
+@font-face {
+    font-family: 'Aleo';
+    src: url('../fonts/aleo-regular-webfont.woff2') format('woff2'), url('../fonts/aleo-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+border: 17px solid #fff;
+font: 400 16px/1.6  "Josefin Sans", sans-serif;
+color:  #e8e8e8;
+// font-size: 16px; Приближение из-за подстановки шрифтов
+// font-weight: 400;
+// line-height: 1.6;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1150px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	background-color:  #5474fd;
+	text-transform: uppercase;
+	font: 400 16px/1.625 Aleo;
+	color:  #ffffff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 18px 39px;
+	letter-spacing: 0.075em;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+	cursor: pointer;
+	background-color: darken(#5474fd,10%);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+.ba-intro {
+	text-align: center;
+	padding-top: 259px;
+	padding-bottom: 120px;
+	background: url(../img/intro_bg.jpg);
+	background-size: cover;
+			&__body {
+
+			}
+			&__title {
+				margin: 0;
+				text-transform: uppercase;
+				color:  #ffffff;
+				font-size: 48px;
+				font-weight: 700;
+				line-height: 1.1em;
+				letter-spacing: 0.06em;
+			}
+			&__subtitle {
+				margin: 0;
+				font-size: 22px;
+				font-weight: 400;
+				letter-spacing: 0.24em;
+			}
+			&__form {
+				padding-top: 35px;
+				input {
+					padding-left: 50px;
+					display: inline-block;
+					background-color: #fff;
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 1.857;
+					width: 450px;
+					height: 55px;
+					border: 2px solid #fff;
+					color:  #999999;
+					&::-webkit-input-placeholder {
+						color:  #999999;
+						padding-left: 25%;
+						letter-spacing: 0.06em;
+                    }
+				}
+			}
+			&__button {
+				margin-left: -5px;
+				display: inline-block;
+				background-color: #5474fd;
+				font: 400 14px/1.857 'Aleo';
+				vertical-align: middle;
+				border: 2px solid #fff;
+				padding: 16px 33px;
+					svg {
+						vertical-align: middle;
+					}
+					&:hover {
+					background-color: darken(#5474fd,10%);
+					}
+			}
+			&__scroll {
+				text-decoration: none;
+				color:  #ffffff;
+				line-height: 1.1em;
+				letter-spacing: 0.06em;
+				margin-top: 125px;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				transition: transform 0.3s;
+						&:hover {
+							transform: scale(1.1);
+						}
+			}
+
+}
+.ba-header {
+	padding: 30px 0;
+	background-color:  #5474fd;
+			&__menu {
+				list-style: none;
+				ul {
+					margin: 0;
+				}
+
+				li {
+					display: inline-block;
+					margin-left: 37px;
+				}
+					a {
+						text-transform: uppercase;
+						font: 400 14px/1.857em Aleo;
+						color:  #ffffff;
+						text-decoration: none;
+						&:hover {
+							color: darken(#fff,30%);
+						}
+
+					}
+			}
+}
+.ba-choose {
+	padding-top: 115px;
+	padding-bottom: 63px;
+	background: url(../img/choose_bg.jpg);
+			&__content {
+				padding-top: 76px;
+				padding-bottom: 66px;
+				p {
+					margin-bottom: 30px;
+				}
+			}
+			&__title {
+				margin: 0 0 58px;
+				font: 400 36px Aleo;
+				color:  #ffffff;
+			}
+			&__img-right {
+				float: right;
+			}
+			&__img-left {
+				margin-left: 67px;
+			}
+			&__button {
+				margin-top: 12px;
+			}
+}
+
+.ba-places {
+
+		background: #333333 url(../img/places_bg.svg) 49% 10% no-repeat;
+		background-size: 50%;
+		padding: 100px 0 70px;
+			 &__body {
+			 	display: flex;
+			 	justify-content: space-around;
+
+			 	p {
+			 		margin-top: 6px;
+			 		font-family: Aleo;
+			 		color:  #e8e8e8;
+			 		font-size: 36px;
+			 		font-weight: 400;
+			 	}
+			 }
+			 &__items {
+			 	text-align: center;
+			 	svg {
+			 		background-color: #333;
+			 	}
+
+			 }
+}
+.ba-travels-top {
+	padding-top: 230px;
+	padding-bottom: 100px;
+	background: url(../img/spain_bg.jpg);
+	background-size: cover;
+			&__suptitle {
+				color:  #e8e8e8;
+				font-size: 20px;
+				font-weight: 400;
+			}
+			&__title {
+				text-transform: uppercase;
+				color:  #ffffff;
+				font-size: 20px;
+				font-weight: 400;
+			}
+			&__content {
+				padding-top: 27px;
+				padding-left: 27px;
+				padding-bottom: 47px;
+				max-width: 540px;
+				background-color:  rgba(35, 35, 35, 0.9);
+				p {
+					color:  #e8e8e8;
+					font-size: 16px;
+					padding-bottom: 30px;
+				}
+
+			}
+			&__button {
+				padding: 18px 62px;
+			}
+}
+
+	.ba-travels-bot {
+		padding-top: 230px;
+		padding-bottom: 100px;
+		padding-left: 50%;
+		background: url(../img/spain_bg2.jpg);
+		background-size: cover;
+				&__suptitle {
+					color:  #e8e8e8;
+					font-size: 20px;
+					font-weight: 400;
+				}
+				&__title {
+					text-transform: uppercase;
+					color:  #ffffff;
+					font-size: 20px;
+					font-weight: 400;
+				}
+				&__content {
+					padding-top: 27px;
+					padding-left: 27px;
+					padding-bottom: 47px;
+					max-width: 540px;
+					background-color:  rgba(35, 35, 35, 0.9);
+					p {
+						color:  #e8e8e8;
+						font-size: 16px;
+						padding-bottom: 30px;
+					}
+
+				}
+				&__button {
+					padding: 18px 62px;
+				}
+	}
+
+	.ba-tourist {
+	 background: url(../img/tourist_bg.jpg);
+	 background-size: cover;
+	 padding-top: 115px;
+	 padding-bottom: 200px;
+	 &__title {
+	  font-family: 'Aleo';
+	  font-size: 36px;
+	  text-align: center;
+	  font-weight: 400;
+	  margin: 0;
+	  margin-bottom: 39px;
+	  margin-bottom: 90px;
+	 }
+	 .fa {
+	  color: #5474fd;
+	  font-size: 16px;
+	  padding-right: 5px;
+	 }
+	}
+	.ba-image-box {
+	 width: 41%;
+	 padding-right: 0;
+	 padding-left: 0;
+	 img {
+	  width: 100%;
+	  height: auto;
+	 }
+	}
+	.ba-content-box {
+	 width: 59%;
+	 background-color: #333333;
+	 padding-top: 45px;
+	 padding-bottom: 39px;
+	 padding-right: 40px;
+	 &__title {
+	  font-size: 20px;
+	  margin: 0;
+	  margin-bottom: 38px;
+	  text-transform: uppercase;
+	 }
+	 &__text {
+	  margin: 0;
+	  color:  #e8e8e8;
+	  font-size: 16px;
+	  font-weight: 400;
+	 }
+	}
+	.ba-arrow-box {
+	 position: relative;
+	 max-width: 1100px;
+	}
+	.ba-arrow {
+	 width: 80px;
+	 height: 50px;
+	 border: 1px solid #fff;
+	 position: absolute;
+	 right: 0;
+	 top: 30px;
+	 cursor: pointer;
+	 svg {
+	  width: 78px;
+	  height: 48px;
+	 }
+	 &--left {
+	  right: 100px;
+
+	 }
+	}
+	.ba-footer {
+	 background-color: #232323;
+	 text-align: center;
+	 color: #fff;
+	}
+	.ba-logo-box {
+	 padding-top: 115px;
+	 &__title {
+	  text-transform: uppercase;
+	  font-size: 24px;
+	  margin: 0;
+	 }
+	 &__subtitle {
+	  margin: 0;
+	 }
+	}
+	.ba-social {
+	 padding-bottom: 30px;
+	 &__list {
+	  list-style-type: none;
+	 }
+	 &__item {
+	  display: inline-block;
+	  margin-right: 20px;
+	 }
+	 &__link {
+	  color: #e8e8e8;
+	  transition: 0.2s ease-in;
+	  &:hover {
+	   color: #5474fd;
+	  }
+	 }
+	}
